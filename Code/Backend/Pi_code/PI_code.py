@@ -23,9 +23,9 @@ obj_lcd = LCD_shift.Lcd_shift()
 
 lampen = 23
 water = 24
-btn_temp = 13
-btn_moist = 19
-btn_li = 26
+btn_temp = 20
+btn_moist = 21
+btn_li = 16
 # ledtest = 24
 
 screen = 1
