@@ -1,0 +1,1410 @@
+/*------------------------------------*\
+  #FONTS
+\*------------------------------------*/
+@font-face {
+  font-family: 'Asap';
+  font-weight: 400;
+  src: url(../fonts/Asap-regular.woff) format('woff'), url(../fonts/Asap-regular.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Asap';
+  font-weight: 500;
+  src: url(../fonts/Asap-Medium.woff) format('woff'), url(../fonts/Asap-Medium.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Asap';
+  font-weight: 600;
+  src: url(../fonts/Asap-SemiBold.woff) format('woff'), url(../fonts/Asap-SemiBold.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Asap';
+  font-weight: 700;
+  src: url(../fonts/Asap-Bold.woff) format('woff'), url(../fonts/Asap-Bold.woff2) format('woff2');
+}
+/*------------------------------------*\
+    #GENERIC
+  \*------------------------------------*/
+
+/*
+      Generic: Page
+      ---
+      Global page styles + universal box-sizing:
+  */
+
+html {
+  font-size: 18px;
+  line-height: 1.5;
+  font-family: 'Asap', arial, sans-serif;
+  color: #1a1a1a;
+  background-color: #dee5f0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/*
+   * Remove text-shadow in selection highlight:
+   * https://twitter.com/miketaylr/status/12228805301
+   *
+   * Customize the background color to match your design.
+   */
+
+::selection {
+  background: #abe636;
+  color: white;
+  text-shadow: none;
+}
+
+/*------------------------------------*\
+    #Elements
+  \*------------------------------------*/
+
+/*
+      Elements: Images
+      ---
+      Default markup for images to make them responsive
+  */
+
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+/*
+      Elements: typography
+      ---
+      Default markup for typographic elements
+  */
+
+h1 {
+  font-size: 36px;
+  line-height: 40px;
+  margin: 0 0 24px;
+}
+
+h2 {
+  font-size: 23px;
+  line-height: 32px;
+  margin: 0 0 24px;
+}
+
+h3 {
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0 0 24px;
+}
+
+h4,
+h5,
+h6 {
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0 0 24px;
+}
+
+p,
+ol,
+ul,
+dl,
+table,
+address,
+figure {
+  margin: 0 0 24px;
+}
+
+ul,
+ol {
+  padding-left: 24px;
+  list-style: none;
+}
+
+li ul,
+li ol {
+  margin-bottom: 0;
+}
+
+/* ul li:not(:last-child)::after {
+  content: '';
+  border: 1px solid #e2e2e2;
+  border-width: 1px 1px 0 0;
+  position: absolute;
+  right: -3px;
+  top: 0;
+  height: 100%;
+} */
+blockquote {
+  font-style: italic;
+  font-size: 23px;
+  line-height: 32px;
+  margin: 0 0 24px;
+  font-family: 'Times New Roman', serif;
+}
+
+blockquote * {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+figcaption {
+  font-size: 12px;
+  line-height: 16px;
+  padding-top: 8px;
+  color: Grey;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: LightGrey;
+  margin: 0 0 24px;
+}
+
+a {
+  color: #1a1a1a;
+  transition: all 0.1s ease-in-out;
+  font-weight: 600;
+}
+
+a:visited,
+a:active {
+  color: #1a1a1a;
+}
+
+a:hover,
+a:focus {
+  color: #3f3f3f;
+}
+
+p {
+  margin: auto auto 108px;
+  font-family: 'Forma DJR Micro', arial, sans-serif;
+  font-weight: 400;
+}
+
+/*------------------------------------*\
+    #OBJECTS
+  \*------------------------------------*/
+
+/*
+      Objects: Row
+      ---
+      Creates a horizontal row that stretches the viewport and adds padding around children
+  */
+
+.o-row {
+  padding: 24px 24px 0;
+  display: flow-root;
+}
+
+/* size modifiers */
+
+.o-row--lg {
+  padding-top: 48px;
+  padding-bottom: 24px;
+}
+
+.o-row--xl {
+  padding-top: 72px;
+  padding-bottom: 48px;
+}
+
+.o-row--nav {
+  background: linear-gradient(220deg, rgba(185, 233, 55, 1) 0%, rgba(87, 209, 49, 1) 100%);
+  padding: auto 12px;
+  border-radius: 40px;
+  width: 90%;
+  margin: 20px auto 0 5%;
+  box-shadow: 6px 6px 5px #4066614f;
+  position: fixed;
+  z-index: 20;
+}
+
+@media (min-width: 768px) {
+  .o-row {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
+  .o-row--md {
+    padding-top: 48px;
+    padding-bottom: 24px;
+  }
+
+  .o-row--lg {
+    padding-top: 72px;
+    padding-bottom: 48px;
+  }
+}
+
+@media (min-width: 992px) {
+  .o-row--xl {
+    padding-top: 96px;
+    padding-bottom: 72px;
+  }
+}
+
+/*
+      Objects: Container
+      ---
+      Creates a horizontal container that sets de global max-width
+  */
+
+.o-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 90em; /* 90 * 16px = 1440px */
+}
+
+.o-container__log {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 100em; /* 90 * 18px = 1800px */
+}
+
+/*
+      Objects: section
+      ---
+      Creates vertical whitespace between adjacent sections inside a row
+  */
+
+.o-section {
+  display: flow-root;
+}
+
+.o-section + .o-section {
+  margin-top: 24px;
+}
+
+@media (min-width: 768px) {
+  .o-section--lg + .o-section--lg,
+  .o-section--xl + .o-section--xl {
+    margin-top: 48px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .o-section--xl + .o-section--xl {
+    margin-top: 72px;
+  }
+}
+
+/*
+      Objects: Layout
+      ---
+      The layout object provides us with a column-style layout system. This object
+      contains the basic structural elements, but classes should be complemented
+      with width utilities
+  */
+
+.o-layout {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.o-layout__item {
+  flex-basis: 100%;
+}
+
+/* gutter modifiers, these affect o-layout__item too */
+
+.o-layout--gutter {
+  margin: 0 -12px;
+}
+
+.o-layout--gutter > .o-layout__item {
+  padding: 0 12px;
+}
+
+.o-layout--gutter-sm {
+  margin: 0 -6px;
+}
+
+.o-layout--gutter-sm > .o-layout__item {
+  padding: 0 6px;
+}
+
+.o-layout--gutter-lg {
+  margin: 0 -24px;
+}
+
+.o-layout--gutter-lg > .o-layout__item {
+  padding: 0 24px;
+}
+
+.o-layout--gutter-xl {
+  margin: 0 -48px;
+}
+
+.o-layout--gutter-xl > .o-layout__item {
+  padding: 0 48px;
+}
+
+/* reverse horizontal row modifier */
+
+.o-layout--row-reverse {
+  flex-direction: row-reverse;
+}
+
+/* Horizontal alignment modifiers*/
+
+.o-layout--justify-start {
+  justify-content: flex-start;
+}
+
+.o-layout--justify-end {
+  justify-content: flex-end;
+}
+
+.o-layout--justify-center {
+  justify-content: center;
+}
+
+.o-layout--justify-space-around {
+  justify-content: space-around;
+}
+
+.o-layout--justify-space-evenly {
+  justify-content: space-evenly;
+}
+
+.o-layout--justify-space-between {
+  justify-content: space-between;
+}
+
+/* Vertical alignment modifiers */
+
+.o-layout--align-start {
+  align-items: flex-start;
+}
+
+.o-layout--align-end {
+  align-items: flex-end;
+}
+
+.o-layout--align-center {
+  align-items: center;
+}
+
+.o-layout--align-baseline {
+  align-items: baseline;
+}
+
+/* Vertical alignment modifiers that only work if there is one than one flex item */
+
+.o-layout--align-content-start {
+  align-content: start;
+}
+
+.o-layout--align-content-end {
+  align-content: end;
+}
+
+.o-layout--align-content-center {
+  align-content: center;
+}
+
+.o-layout--align-content-space-around {
+  align-content: space-around;
+}
+
+.o-layout--align-content-space-between {
+  align-content: space-between;
+}
+
+/*
+      Objects: List
+      ---
+      Small reusable object to remove default list styling from lists
+  */
+
+.o-list {
+  list-style: none;
+  padding: 0;
+}
+
+/*
+      Object: Button reset
+      ---
+      Small button reset object
+  */
+
+.o-button-reset {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font: inherit;
+
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
+
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+
+  /* Corrects inability to style clickable `input` types in iOS */
+  -webkit-appearance: none;
+}
+
+/*------------------------------------*\
+    #COMPONENTS
+  \*------------------------------------*/
+/*
+      Component: header
+      ---
+      Main header of the website
+  */
+
+.c-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.c-header__nav,
+.c-header__cta {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .c-header__nav,
+  .c-header__cta {
+    display: block;
+  }
+
+  .c-header {
+    height: 45px;
+  }
+
+  /* .c-header__nav {
+    margin-right: 20px;
+
+    /* solution 1 */
+  /* margin-left: auto; */
+
+  /* solution 2 */
+  /*  display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+  } */
+  .c-header__nav--main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 12px;
+  }
+  .c-header__mobile-nav-trigger {
+    display: none;
+  }
+}
+/*
+      Component: Logo
+      ---
+      Website main logo
+  */
+
+.c-logo {
+  height: 32px;
+}
+
+.c-logo__symbol {
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  .c-logo {
+    height: 40px;
+  }
+}
+
+/*
+      Component: Nav
+      ---
+      Main navigation of the site
+  */
+.c-nav-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  width: 24px;
+  height: 24px;
+  box-shadow: none;
+}
+.c-nav-trigger__svg {
+  /* fill: #406661; */
+  height: 100%;
+  box-shadow: none;
+}
+
+.c-nav {
+  font-size: 18px;
+  line-height: 24px;
+}
+.c-nav--meta {
+  font-size: 18px;
+}
+.c-nav__link {
+  text-decoration: none;
+  font-weight: 600;
+  display: block;
+  padding: 8px 0;
+  color: #3f3e3e;
+}
+.c-nav__link--meta {
+  border-bottom: 1px solid #abe636;
+  margin-bottom: 16px;
+}
+.c-nav__link,
+.c-nav__link:visited,
+.c-nav__link:active {
+  color: #3f3e3e;
+}
+
+.is-selected .c-nav__link,
+.c-nav__link:hover,
+.c-nav__link:focus {
+  color: #1a1a1a;
+  font-weight: 800;
+}
+
+@media (min-width: 992px) {
+  .c-nav__list {
+    display: flex;
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+
+  .c-nav__item--cta {
+    margin-left: 20px;
+  }
+
+  .c-nav__link {
+    padding: 8px 20px;
+  }
+}
+/*
+      Component: Lead
+      ---
+      Lead type treatments to style everything that differs from standard typography elements
+  */
+
+.c-lead {
+  position: relative;
+}
+.c-lead--sm {
+  font-size: 18px;
+  line-height: 32px;
+}
+.c-lead--md {
+  font-size: 26px;
+  line-height: 32px;
+}
+
+.c-lead--lg {
+  font-size: 32px;
+  line-height: 40px;
+}
+
+.c-lead--xl {
+  font-size: 54px;
+  line-height: 56px;
+}
+
+@media (min-width: 768px) {
+  .c-lead--xl {
+    font-size: 41px;
+    line-height: 48px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .c-lead--xl {
+    font-size: 52px;
+    line-height: 64px;
+  }
+}
+
+/*
+      Component: Intro
+      ---
+      Intro part on the homepage
+  */
+.c-intro {
+  position: relative;
+}
+
+.c-intro--background {
+  width: 100%;
+  margin: 100px 20px;
+}
+
+@media (max-width: 991px) {
+  .c-intro__figure {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .c-intro {
+    margin-bottom: -96px;
+  }
+
+  .c-intro__body {
+    position: relative;
+    top: -48px;
+  }
+}
+/*
+      Component: CTA link
+      ---
+      Small cta link with custom animation
+  */
+
+.c-link-cta {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 600;
+  padding: 8px 20px;
+
+  background: #007c89;
+}
+
+.c-link-cta,
+.c-link-cta:visited,
+.c-link-cta:active {
+  color: #fff;
+}
+
+.c-link-cta:hover,
+.c-link-cta:focus {
+  color: #fff;
+  background: #0191a1;
+}
+
+.c-link-cta:active {
+  background-color: #0191a1;
+}
+
+.c-link-cta--lg {
+  font-size: 16px;
+  padding: 16px 32px;
+}
+/*
+      Component: background
+      ---
+      all settings for every background of every page
+  */
+
+.c-background-transparent {
+  background-color: #f5f5f5;
+  text-align: left;
+  box-shadow: 6px 6px 5px #4066614f;
+  margin: 100px auto 100px auto;
+  border-radius: 10px;
+  padding: 54px 108px;
+  width: 75%;
+
+  height: auto;
+}
+
+.c-background-transparent li {
+  list-style: disc;
+  font-family: 'Forma DJR Micro', arial, sans-serif;
+  font-weight: 500;
+}
+
+.c-background-transparent p {
+  padding: 0;
+  margin: 0;
+}
+
+.c-background-transparent h1 {
+  border-bottom: 5px solid;
+  padding-bottom: 18px;
+  border-color: rgb(87, 209, 49);
+}
+
+@media (max-width: 768px) {
+  .c-background-transparent {
+    padding: 27px 54px;
+  }
+}
+
+/* Slideshow container */
+.c-slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: 36px auto auto auto;
+}
+
+/* Hide the images by default */
+.c-mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.c-prev,
+.c-next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.c-next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.c-prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.c-prev:hover,
+.c-next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.c-text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.c-numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.c-dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px 108px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.c-active,
+.c-dot:hover {
+  background-color: #ffffff;
+}
+
+/* Fading animation */
+.c-fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+.c-slideimg-width {
+  width: 100%;
+}
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*
+    Component: mobile nav
+    ---
+    Dedicated mobile nav component
+*/
+
+.c-mobile-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 100vh;
+  pointer-events: none;
+}
+
+.has-mobile-nav .c-mobile-nav {
+  /* opacity: 1; */
+  pointer-events: auto;
+}
+
+.c-mobile-nav__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.c-mobile-nav__bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  background-color: #406661;
+  transition: opacity 0.25s ease;
+}
+
+.has-mobile-nav .c-mobile-nav__bg {
+  opacity: 0.5;
+}
+
+.c-mobile-nav__body {
+  position: relative;
+  padding: 24px;
+  height: 100vh;
+  width: 100vw;
+  background-color: #f5f5f5;
+  transform: translateY(-100%);
+  transition: transform 0.25s ease;
+}
+
+.has-mobile-nav .c-mobile-nav__body {
+  transform: translateY(0%);
+}
+
+@media (min-width: 768px) {
+  .c-mobile-nav__body {
+    padding: 48px;
+  }
+}
+
+@media (min-width: 992px) {
+  /* Hide the mobile nav on larger viewports even whent it's open on smaller screens */
+  .c-mobile-nav {
+    display: none !important;
+  }
+}
+
+.c-page {
+  position: relative;
+  transition: transform 0.25s ease;
+}
+.has-mobile-nav .c-page {
+  transform: translateY(25%);
+}
+
+.c-overview {
+  margin: 100px;
+  background-color: #f5f5f5;
+  box-shadow: 6px 6px 5px #4066614f;
+  border-radius: 40px;
+  height: 100%;
+  width: auto;
+  padding: 36px;
+}
+
+.c-overview p {
+  font-size: 16px;
+  color: grey;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .c-overview {
+    margin-top: 100px;
+  }
+}
+
+.c-chart {
+  position: inherit;
+  margin-bottom: 100px;
+  margin-top: 100px;
+  width: 100px;
+}
+
+.c-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.c-title h1 {
+  color: #1a1a1a;
+}
+
+.c-title svg {
+  margin-bottom: 80%;
+}
+.c-log {
+  margin-top: 50px;
+}
+.c-log__nav {
+  background: linear-gradient(220deg, rgba(185, 233, 55, 1) 0%, rgba(87, 209, 49, 1) 100%);
+  border-radius: 40px;
+  margin: 18px 36px;
+  box-shadow: 6px 6px 5px #4066614f;
+}
+
+.c-log__nav h1 {
+  font-size: 24px;
+}
+
+.c-timer h1 {
+  margin-top: 72px;
+}
+.c-timer__nav {
+  background: linear-gradient(220deg, rgba(185, 233, 55, 1) 0%, rgba(87, 209, 49, 1) 100%);
+  border-radius: 40px;
+  padding: 18px auto;
+  text-decoration: none;
+  box-shadow: 6px 6px 5px #4066614f;
+}
+
+.c-timer__nav ul {
+  display: flex;
+  justify-content: space-around;
+
+  align-items: center;
+}
+.c-timer__nav ul li {
+  list-style: none;
+}
+
+.c-form {
+  margin: auto 5%;
+}
+.c-form__item {
+  display: block;
+  margin: 18px auto;
+}
+
+.c-form__item label {
+  font-weight: 800;
+}
+
+.c-form__item input,
+select {
+  width: 100%;
+  height: 54px;
+  border-radius: 20px;
+  display: block;
+  padding-left: 9px;
+  padding-right: 9px;
+  border: 2px rgb(87, 209, 49) solid;
+  box-shadow: 6px 6px 5px #4066614f;
+}
+.c-form__item select option {
+  border-radius: 40px;
+}
+.c-form__btn {
+  display: flex;
+  justify-content: space-around;
+
+  align-items: center;
+}
+.c-form__btn input,
+button {
+  background: linear-gradient(220deg, rgba(185, 233, 55, 1) 0%, rgba(87, 209, 49, 1) 100%);
+  border: none;
+  border-radius: 40px;
+  padding: 18px auto;
+  font-size: 27px;
+  font-weight: 500;
+  width: 90%;
+  margin-top: 36px;
+  box-shadow: 6px 6px 5px #4066614f;
+  cursor: pointer;
+}
+
+select:required:invalid {
+  color: gray;
+}
+option[value=''][disabled] {
+  display: none;
+}
+option {
+  color: black;
+}
+/*------------------------------------*\
+    #UTILITIES
+  \*------------------------------------*/
+
+/*
+      Utilities: spacing
+      ---
+      Utility classes to put specific margins and paddings onto elements
+  */
+
+.u-pt-clear {
+  padding-top: 0 !important;
+}
+
+.u-mb-clear {
+  margin-bottom: 0 !important;
+}
+
+.u-mb-xs {
+  margin-bottom: 4px !important;
+}
+
+.u-mb-sm {
+  margin-bottom: 8px !important;
+}
+
+.u-mb-md {
+  margin-bottom: 16px !important;
+}
+
+.u-mb-lg {
+  margin-bottom: 32px !important;
+}
+
+.u-mb-xl {
+  margin-bottom: 48px !important;
+}
+
+/*
+      Utilities: max-width
+      ---
+      Utility classes to put specific max widths onto elements
+  */
+
+.u-max-width-sm {
+  max-width: 30em !important;
+}
+
+.u-max-width-md {
+  max-width: 45em !important;
+}
+
+.u-max-width-lg {
+  max-width: 60em !important;
+}
+
+.u-max-width-xl {
+  max-width: 75em !important;
+}
+
+.u-max-width-none {
+  max-width: none !important;
+}
+
+/*
+      Utility: Flex
+      ---
+      Utility classes to put specific flex properties onto elements
+      Will be mostly used on o-layout__item
+  */
+
+.u-flex-basis-auto {
+  flex-basis: auto !important;
+}
+
+.u-flex-grow-1 {
+  flex-grow: 1 !important;
+}
+
+.u-1-of-2 {
+  flex-basis: calc(100% / 2) !important;
+}
+
+.u-1-of-3 {
+  flex-basis: calc(100% / 3) !important;
+}
+
+.u-2-of-3 {
+  flex-basis: calc(100% / 3 * 2) !important;
+}
+
+.u-1-of-4 {
+  flex-basis: calc(100% / 4) !important;
+}
+
+.u-3-of-4 {
+  flex-basis: calc(100% / 4 * 3) !important;
+}
+
+.u-1-of-5 {
+  flex-basis: calc(100% / 5) !important;
+}
+
+.u-2-of-5 {
+  flex-basis: calc(100% / 5 * 2) !important;
+}
+
+.u-3-of-5 {
+  flex-basis: calc(100% / 5 * 3) !important;
+}
+
+.u-4-of-5 {
+  flex-basis: calc(100% / 5 * 4) !important;
+}
+
+.u-1-of-6 {
+  flex-basis: calc(100% / 6) !important;
+}
+
+.u-5-of-6 {
+  flex-basis: calc(100% / 6 * 5) !important;
+}
+
+@media (min-width: 576px) {
+  .u-1-of-2-bp1 {
+    flex-basis: calc(100% / 2) !important;
+  }
+  .u-1-of-3-bp1 {
+    flex-basis: calc(100% / 3) !important;
+  }
+  .u-2-of-3-bp1 {
+    flex-basis: calc(100% / 3 * 2) !important;
+  }
+  .u-1-of-4-bp1 {
+    flex-basis: calc(100% / 4) !important;
+  }
+  .u-3-of-4-bp1 {
+    flex-basis: calc(100% / 4 * 3) !important;
+  }
+  .u-1-of-5-bp1 {
+    flex-basis: calc(100% / 5) !important;
+  }
+  .u-2-of-5-bp1 {
+    flex-basis: calc(100% / 5 * 2) !important;
+  }
+  .u-3-of-5-bp1 {
+    flex-basis: calc(100% / 5 * 3) !important;
+  }
+  .u-4-of-5-bp1 {
+    flex-basis: calc(100% / 5 * 4) !important;
+  }
+  .u-1-of-6-bp1 {
+    flex-basis: calc(100% / 6) !important;
+  }
+  .u-5-of-6-bp1 {
+    flex-basis: calc(100% / 6 * 5) !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .u-1-of-2-bp2 {
+    flex-basis: calc(100% / 2) !important;
+  }
+  .u-1-of-3-bp2 {
+    flex-basis: calc(100% / 3) !important;
+  }
+  .u-2-of-3-bp2 {
+    flex-basis: calc(100% / 3 * 2) !important;
+  }
+  .u-1-of-4-bp2 {
+    flex-basis: calc(100% / 4) !important;
+  }
+  .u-3-of-4-bp2 {
+    flex-basis: calc(100% / 4 * 3) !important;
+  }
+  .u-1-of-5-bp2 {
+    flex-basis: calc(100% / 5) !important;
+  }
+  .u-2-of-5-bp2 {
+    flex-basis: calc(100% / 5 * 2) !important;
+  }
+  .u-3-of-5-bp2 {
+    flex-basis: calc(100% / 5 * 3) !important;
+  }
+  .u-4-of-5-bp2 {
+    flex-basis: calc(100% / 5 * 4) !important;
+  }
+  .u-1-of-6-bp2 {
+    flex-basis: calc(100% / 6) !important;
+  }
+  .u-5-of-6-bp2 {
+    flex-basis: calc(100% / 6 * 5) !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .u-1-of-2-bp3 {
+    flex-basis: calc(100% / 2) !important;
+  }
+  .u-1-of-3-bp3 {
+    flex-basis: calc(100% / 3) !important;
+  }
+  .u-2-of-3-bp3 {
+    flex-basis: calc(100% / 3 * 2) !important;
+  }
+  .u-1-of-4-bp3 {
+    flex-basis: calc(100% / 4) !important;
+  }
+  .u-3-of-4-bp3 {
+    flex-basis: calc(100% / 4 * 3) !important;
+  }
+  .u-1-of-5-bp3 {
+    flex-basis: calc(100% / 5) !important;
+  }
+  .u-2-of-5-bp3 {
+    flex-basis: calc(100% / 5 * 2) !important;
+  }
+  .u-3-of-5-bp3 {
+    flex-basis: calc(100% / 5 * 3) !important;
+  }
+  .u-4-of-5-bp3 {
+    flex-basis: calc(100% / 5 * 4) !important;
+  }
+  .u-1-of-6-bp3 {
+    flex-basis: calc(100% / 6) !important;
+  }
+  .u-5-of-6-bp3 {
+    flex-basis: calc(100% / 6 * 5) !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .u-1-of-2-bp4 {
+    flex-basis: calc(100% / 2) !important;
+  }
+  .u-1-of-3-bp4 {
+    flex-basis: calc(100% / 3) !important;
+  }
+  .u-2-of-3-bp4 {
+    flex-basis: calc(100% / 3 * 2) !important;
+  }
+  .u-1-of-4-bp4 {
+    flex-basis: calc(100% / 4) !important;
+  }
+  .u-3-of-4-bp4 {
+    flex-basis: calc(100% / 4 * 3) !important;
+  }
+  .u-1-of-5-bp4 {
+    flex-basis: calc(100% / 5) !important;
+  }
+  .u-2-of-5-bp4 {
+    flex-basis: calc(100% / 5 * 2) !important;
+  }
+  .u-3-of-5-bp4 {
+    flex-basis: calc(100% / 5 * 3) !important;
+  }
+  .u-4-of-5-bp4 {
+    flex-basis: calc(100% / 5 * 4) !important;
+  }
+  .u-1-of-6-bp4 {
+    flex-basis: calc(100% / 6) !important;
+  }
+  .u-5-of-6-bp4 {
+    flex-basis: calc(100% / 6 * 5) !important;
+  }
+}
+
+/*------------------------------------*\
+    #MEDIA
+  \*------------------------------------*/
+
+/*
+      Print styles.
+      ---
+      Inlined to avoid the additional HTTP request:
+      http://www.phpied.com/delay-loading-your-print-css/
+  */
+
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster:
+                                     http://www.sanbeiji.com/archives/953 */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: ' (' attr(href) ')';
+  }
+  abbr[title]:after {
+    content: ' (' attr(title) ')';
+  }
+  /*
+       * Don't show links that are fragment identifiers,
+       * or use the `javascript:` pseudo protocol
+       */
+  a[href^='#']:after,
+  a[href^='javascript:']:after {
+    content: '';
+  }
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  /*
+       * Printing Tables:
+       * http://css-discuss.incutio.com/wiki/Printing_Tables
+       */
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
